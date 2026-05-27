@@ -81,7 +81,7 @@ const Reviews = () => {
 
         <div style={{ textAlign: 'center' }}>
           <a 
-            href="https://share.google/xYG04dGoS9OpQZUO9" 
+            href="https://share.google/w6yLAIlsi71EuNWHM" 
             target="_blank" 
             rel="noreferrer"
             className="btn-primary animate-fade-up" 

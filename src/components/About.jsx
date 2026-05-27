@@ -62,7 +62,7 @@ const About = () => {
 
           {/* Van Photo Column */}
           <div className="animate-fade-up" style={{ position: 'relative', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.1)' }}>
-            <img src="/van.jpg" alt="SAM H Heating & Plumbing Fully Equipped Van" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            <img src="/van.jpg" alt="SAM H Heating & Plumbing Fully Equipped Van" loading="lazy" style={{ width: '100%', height: 'auto', display: 'block' }} />
             <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '32px 24px', background: 'linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 50%, transparent 100%)' }}>
               <h3 style={{ color: 'white', margin: 0, fontSize: '1.5rem', fontWeight: 700, textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>Fully Equipped Mobile Workshop</h3>
               <p style={{ color: 'rgba(255,255,255,0.9)', margin: '8px 0 0 0', fontSize: '1.05rem', textShadow: '0 1px 2px rgba(0,0,0,0.5)' }}>Ready to respond rapidly across Middlesbrough</p>
@@ -75,9 +75,9 @@ const About = () => {
         <div className="animate-fade-up" style={{ marginTop: '80px', paddingTop: '48px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
           <h3 style={{ textAlign: 'center', fontSize: '1.2rem', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--text-muted)', marginBottom: '40px', fontWeight: 600 }}>Partnering with Premium Brands</h3>
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '64px' }}>
-            <img src="/BAXI_logo.svg.png" alt="Baxi" style={{ height: '40px', objectFit: 'contain', filter: 'brightness(1.2) contrast(1.2)' }} />
-            <img src="/Worcester-Bosch-Logo.png" alt="Worcester Bosch Group" style={{ height: '45px', objectFit: 'contain', filter: 'brightness(1.2) contrast(1.2)' }} />
-            <img src="/vaillant-logo-aw-2104046.jpg" alt="Vaillant" style={{ height: '45px', objectFit: 'contain', borderRadius: '4px' }} />
+            <img src="/BAXI_logo.svg.png" alt="Baxi" loading="lazy" style={{ height: '40px', objectFit: 'contain', filter: 'brightness(1.2) contrast(1.2)' }} />
+            <img src="/Worcester-Bosch-Logo.png" alt="Worcester Bosch Group" loading="lazy" style={{ height: '45px', objectFit: 'contain', filter: 'brightness(1.2) contrast(1.2)' }} />
+            <img src="/vaillant-logo-aw-2104046.jpg" alt="Vaillant" loading="lazy" style={{ height: '45px', objectFit: 'contain', borderRadius: '4px' }} />
             <a 
               href="https://www.gassaferegister.co.uk/businesscompetencies?ep=1xPOGK1AdTeDy4hfLti5P%252bDWdGsTrdvrfTppefbZbQrYlBiMCC0rXXnJQpu7IPU%252b%252bRWN9MvuMdfrQ88mdu%252fZWPyfSAZ%252b17MiIljiPj5tMcvcKxTtHsOe2K6FT8fb9HZ1OBbK3ApVZubC92Ov7cRyLQ%253d%253d"
               target="_blank"
@@ -86,7 +86,7 @@ const About = () => {
               onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <img src="/gassafe-logo.png" alt="Gas Safe Register" style={{ height: '65px', objectFit: 'contain' }} />
+              <img src="/gassafe-logo.png" alt="Gas Safe Register" loading="lazy" style={{ height: '65px', objectFit: 'contain' }} />
             </a>
           </div>
         </div>

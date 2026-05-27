@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Contact = () => {
   const InstagramIcon = () => (
@@ -30,122 +30,103 @@ const Contact = () => {
       </div>
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', 
-          gap: '40px', 
-          marginBottom: '64px' 
-        }}>
+        
+        {/* Contact Form and Details Grid */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '64px', marginBottom: '80px' }}>
           
-          {/* Brand Column */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <img 
-              src="/logo.png" 
-              alt="SAM H Heating & Plumbing" 
-              style={{ height: '70px', objectFit: 'contain', display: 'block', alignSelf: 'flex-start' }} 
-            />
-            <p style={{ fontSize: '1.2rem', fontWeight: 700, margin: '8px 0', color: 'white', lineHeight: 1.4 }}>
-              Trusted Professionals in Heating and Plumbing
-            </p>
-            <p style={{ color: '#9CA3AF', lineHeight: 1.6, fontSize: '0.95rem', margin: 0 }}>
-              Fully insured, Gas Safe registered, and dedicated to excellence.
-            </p>
+          {/* Form */}
+          <div className="animate-fade-up" style={{ background: 'rgba(255,255,255,0.03)', padding: '40px', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }}>
+            <h3 style={{ fontSize: '2rem', margin: '0 0 8px 0', color: 'white', fontWeight: 700 }}>Send us a Message</h3>
+            <p style={{ color: '#9CA3AF', marginBottom: '32px', fontSize: '0.95rem' }}>We aim to respond to all inquiries within 24 hours.</p>
+            
+            <form action="https://api.web3forms.com/submit" method="POST" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              {/* Replace value with your Web3Forms Access Key */}
+              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE" />
+              
+              <div style={{ display: 'flex', gap: '16px' }}>
+                <input type="text" name="name" placeholder="Your Name" required style={{ flex: 1, padding: '16px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.3)', color: 'white', fontSize: '1rem', outline: 'none' }} onFocus={(e) => e.target.style.borderColor = 'var(--primary-blue)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} />
+                <input type="tel" name="phone" placeholder="Phone" style={{ flex: 1, padding: '16px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.3)', color: 'white', fontSize: '1rem', outline: 'none' }} onFocus={(e) => e.target.style.borderColor = 'var(--primary-blue)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} />
+              </div>
+              <input type="email" name="email" placeholder="Your Email" required style={{ width: '100%', padding: '16px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.3)', color: 'white', fontSize: '1rem', boxSizing: 'border-box', outline: 'none' }} onFocus={(e) => e.target.style.borderColor = 'var(--primary-blue)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} />
+              <textarea name="message" placeholder="How can we help you? (e.g. Boiler Service, Emergency Repair)" required rows="4" style={{ width: '100%', padding: '16px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.3)', color: 'white', fontSize: '1rem', resize: 'vertical', boxSizing: 'border-box', outline: 'none', fontFamily: 'inherit' }} onFocus={(e) => e.target.style.borderColor = 'var(--primary-blue)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}></textarea>
+              <button type="submit" className="btn-primary" style={{ padding: '16px', fontSize: '1.1rem', marginTop: '8px', border: 'none', cursor: 'pointer', borderRadius: '8px', fontWeight: 600, transition: 'transform 0.2s', width: '100%' }} onMouseOver={(e) => e.target.style.transform = 'translateY(-2px)'} onMouseOut={(e) => e.target.style.transform = 'translateY(0)'}>Send Message</button>
+            </form>
           </div>
 
-          {/* Quick Links Column */}
-          <div>
-            <h4 style={{ fontSize: '1.25rem', marginBottom: '24px', color: 'white', fontWeight: 700 }}>
-              Quick Links
-            </h4>
-            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              {['Home', 'Our Services', 'About Us', 'Reviews'].map((item) => {
-                const id = item === 'Home' ? '#home' : item === 'Our Services' ? '#services' : item === 'About Us' ? '#about' : '#reviews';
-                return (
-                  <li key={item}>
-                    <a href={id} className="footer-link" style={{ fontSize: '1.05rem', fontWeight: 500 }}>
-                      {item}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+          {/* Contact Details */}
+          <div className="animate-slide-in-right" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <h2 style={{ fontSize: '2.5rem', margin: '0 0 16px 0', color: 'white', fontWeight: 800 }}>Get in Touch</h2>
+            <p style={{ color: '#9CA3AF', fontSize: '1.1rem', lineHeight: 1.8, marginBottom: '48px' }}>
+              Whether you need an emergency repair, a routine boiler service, or a complete installation quote, our Gas Safe registered team is ready to help. Reach out directly via phone or email.
+            </p>
 
-          {/* Contact Info Column */}
-          <div>
-            <h4 style={{ fontSize: '1.25rem', marginBottom: '24px', color: 'white', fontWeight: 700 }}>
-              Contact Info
-            </h4>
-            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '24px' }}>
-              <li style={{ marginBottom: '16px' }}>
-                <a href="tel:+447424966646" style={{ display: 'flex', alignItems: 'center', gap: '16px', textDecoration: 'none' }} className="contact-link">
-                  <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(255, 90, 0, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'background 0.3s ease' }}>
-                    <Phone size={20} color="var(--primary-orange)" />
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '32px' }}>
+              <li>
+                <a href="tel:+447424966646" style={{ display: 'flex', alignItems: 'center', gap: '24px', textDecoration: 'none' }} className="contact-link">
+                  <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: 'rgba(255, 90, 0, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'background 0.3s ease', flexShrink: 0 }}>
+                    <Phone size={24} color="var(--primary-orange)" />
                   </div>
                   <div>
-                    <p style={{ color: '#9CA3AF', fontSize: '0.85rem', margin: '0 0 4px 0', textTransform: 'uppercase', letterSpacing: '1px' }}>Call Us 24/7</p>
-                    <p style={{ color: 'white', fontSize: '1.1rem', fontWeight: 600, margin: 0, letterSpacing: '0.5px', transition: 'color 0.3s ease' }} className="contact-text-orange">+447424966646</p>
+                    <p style={{ color: '#9CA3AF', fontSize: '0.9rem', margin: '0 0 4px 0', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 600 }}>Call Us 24/7</p>
+                    <p style={{ color: 'white', fontSize: '1.5rem', fontWeight: 700, margin: 0, letterSpacing: '0.5px', transition: 'color 0.3s ease' }} className="contact-text-orange">+447424966646</p>
                   </div>
                 </a>
               </li>
               <li>
-                <a href="mailto:sahaheating@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: '16px', textDecoration: 'none', marginTop: '4px' }} className="contact-link">
-                  <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(0, 82, 255, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'background 0.3s ease' }}>
-                    <Mail size={20} color="var(--primary-blue)" />
+                <a href="mailto:sahaheating@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: '24px', textDecoration: 'none' }} className="contact-link">
+                  <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: 'rgba(0, 82, 255, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'background 0.3s ease', flexShrink: 0 }}>
+                    <Mail size={24} color="var(--primary-blue)" />
                   </div>
                   <div>
-                    <p style={{ color: '#9CA3AF', fontSize: '0.85rem', margin: '0 0 4px 0', textTransform: 'uppercase', letterSpacing: '1px' }}>Email Us</p>
-                    <p style={{ color: 'white', fontSize: '1.05rem', fontWeight: 600, margin: 0, transition: 'color 0.3s ease' }} className="contact-text-blue">sahaheating@gmail.com</p>
+                    <p style={{ color: '#9CA3AF', fontSize: '0.9rem', margin: '0 0 4px 0', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 600 }}>Email Us</p>
+                    <p style={{ color: 'white', fontSize: '1.25rem', fontWeight: 600, margin: 0, transition: 'color 0.3s ease' }} className="contact-text-blue">sahaheating@gmail.com</p>
                   </div>
                 </a>
               </li>
-              <li style={{ marginTop: '20px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                  <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(255, 255, 255, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" color="white"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <li>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
+                  <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: 'rgba(255, 255, 255, 0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <MapPin size={24} color="white" />
                   </div>
                   <div>
-                    <p style={{ color: '#9CA3AF', fontSize: '0.85rem', margin: '0 0 4px 0', textTransform: 'uppercase', letterSpacing: '1px' }}>Address</p>
-                    <p style={{ color: 'white', fontSize: '0.95rem', fontWeight: 500, margin: 0, lineHeight: 1.4 }}>Middlesbrough, England<br/>and its surroundings</p>
+                    <p style={{ color: '#9CA3AF', fontSize: '0.9rem', margin: '0 0 4px 0', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 600 }}>Service Area</p>
+                    <p style={{ color: 'white', fontSize: '1.1rem', fontWeight: 500, margin: 0, lineHeight: 1.5 }}>Middlesbrough, England<br/>and surrounding areas</p>
                   </div>
                 </div>
               </li>
             </ul>
           </div>
 
-          {/* Follow Us Column */}
-          <div>
-            <h4 style={{ fontSize: '1.25rem', marginBottom: '24px', color: 'white', fontWeight: 700 }}>
-              Follow Us
-            </h4>
-            <p style={{ color: '#9CA3AF', fontSize: '0.95rem', marginBottom: '20px', lineHeight: 1.6 }}>
-              Stay updated with our latest projects and offers on social media.
-            </p>
-            <div style={{ display: 'flex', gap: '16px' }}>
-              <a href="https://instagram.com/sam_h_heating_and_plumbing" target="_blank" rel="noreferrer" className="social-icon">
-                <InstagramIcon />
-              </a>
-              <a href="https://facebook.com/sam_h_heating_and_plumbing" target="_blank" rel="noreferrer" className="social-icon">
-                <FacebookIcon />
-              </a>
-            </div>
-          </div>
-
         </div>
-        
-        {/* Footer Bottom */}
+
+        {/* Footer Bottom Setup */}
         <div style={{ 
           borderTop: '1px solid rgba(255,255,255,0.1)', 
           paddingTop: '32px', 
           display: 'flex',
-          flexDirection: 'column',
+          justifyContent: 'space-between',
           alignItems: 'center',
-          gap: '12px',
-          color: '#9CA3AF', 
-          fontSize: '0.95rem',
-          textAlign: 'center'
+          flexWrap: 'wrap',
+          gap: '24px'
         }}>
-          <p style={{ margin: 0 }}>&copy; {new Date().getFullYear()} <span style={{ color: 'white', fontWeight: 600 }}>SAM H Heating & Plumbing</span>. All rights reserved.</p>
+          
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+            <img src="/logo.png" alt="SAM H Heating & Plumbing Logo" style={{ height: '40px', objectFit: 'contain' }} />
+            <p style={{ color: '#9CA3AF', fontSize: '0.95rem', margin: 0 }}>
+              &copy; {new Date().getFullYear()} <span style={{ color: 'white', fontWeight: 600 }}>SAM H Heating & Plumbing</span>. All rights reserved.
+            </p>
+          </div>
+
+          <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
+            <span style={{ color: '#9CA3AF', fontSize: '0.95rem', fontWeight: 600 }}>Follow Us:</span>
+            <a href="https://instagram.com/sam_h_heating_and_plumbing" target="_blank" rel="noreferrer" className="social-icon" style={{ color: 'white', transition: 'color 0.3s', display: 'flex' }} onMouseOver={(e) => e.currentTarget.style.color = 'var(--primary-orange)'} onMouseOut={(e) => e.currentTarget.style.color = 'white'}>
+              <InstagramIcon />
+            </a>
+            <a href="https://facebook.com/sam_h_heating_and_plumbing" target="_blank" rel="noreferrer" className="social-icon" style={{ color: 'white', transition: 'color 0.3s', display: 'flex' }} onMouseOver={(e) => e.currentTarget.style.color = 'var(--primary-blue)'} onMouseOut={(e) => e.currentTarget.style.color = 'white'}>
+              <FacebookIcon />
+            </a>
+          </div>
+
         </div>
       </div>
     </footer>

@@ -56,7 +56,7 @@ const Gallery = () => {
           >
             {images.map((item, i) => (
               <div key={i} style={{ minWidth: '100%', scrollSnapAlign: 'center', borderRadius: '16px', overflow: 'hidden', position: 'relative' }}>
-                <img src={item.src} alt={item.title} style={{ width: '100%', height: '500px', objectFit: 'cover' }} />
+                <img src={item.src} alt={item.title} loading="lazy" style={{ width: '100%', height: '500px', objectFit: 'cover' }} />
                 <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '32px 24px', background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%)' }}>
                   <h3 style={{ color: 'white', margin: 0, fontSize: '1.5rem', fontWeight: 600, textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>{item.title}</h3>
                 </div>

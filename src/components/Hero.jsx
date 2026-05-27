@@ -17,7 +17,7 @@ const Hero = () => {
         <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
           
           <div className="animate-fade-up" style={{ display: 'inline-block', padding: '8px 16px', background: 'rgba(0, 68, 204, 0.1)', color: 'var(--primary-blue)', borderRadius: '50px', fontWeight: 600, fontSize: '0.9rem', marginBottom: '24px', letterSpacing: '0.5px' }}>
-            London's Premier Heating & Plumbing
+            Middlesbrough's Premier Heating & Plumbing
           </div>
 
           <h1 className="hero-title animate-fade-up" style={{ fontSize: '4rem', fontWeight: 800, marginBottom: '24px', lineHeight: 1.1, animationDelay: '0.1s' }}>
@@ -33,9 +33,9 @@ const Hero = () => {
           </p>
 
           <div className="animate-fade-up" style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap', animationDelay: '0.3s', marginBottom: '24px' }}>
-            <a href="tel:07424966646" className="btn-primary" style={{ padding: '16px 36px', fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <a href="tel:+447424966646" className="btn-primary" style={{ padding: '16px 36px', fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
               <Phone size={22} />
-              Call 07424 966646
+              Call +447424966646
             </a>
             <a href="#services" className="btn-secondary" style={{ padding: '16px 36px', fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
               Our Services

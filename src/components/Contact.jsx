@@ -25,7 +25,7 @@ const Contact = () => {
       <div style={{ background: 'var(--primary-orange)', padding: '24px 0', textAlign: 'center', marginBottom: '80px', position: 'relative', zIndex: 1 }}>
         <div className="container">
           <h3 style={{ margin: 0, color: 'white', fontSize: '1.5rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px' }}>Emergency Callout Available 24/7</h3>
-          <p style={{ margin: '8px 0 0 0', color: 'rgba(255,255,255,0.95)', fontSize: '1.1rem', fontWeight: 500 }}>Fast response across London. Call <a href="tel:07424966646" style={{ color: 'white', textDecoration: 'underline', fontWeight: 700 }}>07424 966646</a> immediately.</p>
+          <p style={{ margin: '8px 0 0 0', color: 'rgba(255,255,255,0.95)', fontSize: '1.1rem', fontWeight: 500 }}>Fast response across Middlesbrough. Call <a href="tel:+447424966646" style={{ color: 'white', textDecoration: 'underline', fontWeight: 700 }}>+447424966646</a> immediately.</p>
         </div>
       </div>
 
@@ -77,27 +77,38 @@ const Contact = () => {
               Contact Info
             </h4>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '24px' }}>
-              <li>
-                <a href="tel:07424966646" style={{ display: 'flex', alignItems: 'center', gap: '16px', textDecoration: 'none' }} className="contact-link">
-                  <span style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '48px', height: '48px', background: 'var(--primary-orange)', borderRadius: '12px', transition: 'all 0.3s ease' }} className="contact-icon">
-                    <Phone size={20} />
-                  </span>
+              <li style={{ marginBottom: '16px' }}>
+                <a href="tel:+447424966646" style={{ display: 'flex', alignItems: 'center', gap: '16px', textDecoration: 'none' }} className="contact-link">
+                  <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(255, 90, 0, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'background 0.3s ease' }}>
+                    <Phone size={20} color="var(--primary-orange)" />
+                  </div>
                   <div>
-                    <p style={{ color: '#9CA3AF', fontSize: '0.8rem', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 600 }}>Call Us</p>
-                    <p style={{ color: 'white', fontSize: '1.1rem', fontWeight: 600, margin: 0, letterSpacing: '0.5px', transition: 'color 0.3s ease' }} className="contact-text-orange">07424 966646</p>
+                    <p style={{ color: '#9CA3AF', fontSize: '0.85rem', margin: '0 0 4px 0', textTransform: 'uppercase', letterSpacing: '1px' }}>Call Us 24/7</p>
+                    <p style={{ color: 'white', fontSize: '1.1rem', fontWeight: 600, margin: 0, letterSpacing: '0.5px', transition: 'color 0.3s ease' }} className="contact-text-orange">+447424966646</p>
                   </div>
                 </a>
               </li>
               <li>
                 <a href="mailto:sahaheating@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: '16px', textDecoration: 'none', marginTop: '4px' }} className="contact-link">
-                  <span style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '48px', height: '48px', background: 'var(--primary-blue)', borderRadius: '12px', transition: 'all 0.3s ease' }} className="contact-icon">
-                    <Mail size={20} />
-                  </span>
+                  <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(0, 82, 255, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'background 0.3s ease' }}>
+                    <Mail size={20} color="var(--primary-blue)" />
+                  </div>
                   <div>
-                    <p style={{ color: '#9CA3AF', fontSize: '0.8rem', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 600 }}>Email Us</p>
+                    <p style={{ color: '#9CA3AF', fontSize: '0.85rem', margin: '0 0 4px 0', textTransform: 'uppercase', letterSpacing: '1px' }}>Email Us</p>
                     <p style={{ color: 'white', fontSize: '1.05rem', fontWeight: 600, margin: 0, transition: 'color 0.3s ease' }} className="contact-text-blue">sahaheating@gmail.com</p>
                   </div>
                 </a>
+              </li>
+              <li style={{ marginTop: '20px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                  <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(255, 255, 255, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" color="white"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  </div>
+                  <div>
+                    <p style={{ color: '#9CA3AF', fontSize: '0.85rem', margin: '0 0 4px 0', textTransform: 'uppercase', letterSpacing: '1px' }}>Address</p>
+                    <p style={{ color: 'white', fontSize: '0.95rem', fontWeight: 500, margin: 0, lineHeight: 1.4 }}>Middlesbrough, England<br/>and its surroundings</p>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>

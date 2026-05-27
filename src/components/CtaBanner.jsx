@@ -24,9 +24,9 @@ const CtaBanner = () => {
           <a href="#contact" className="btn-primary" style={{ background: 'var(--gradient-orange)', color: 'white', border: 'none' }}>
             Get a Free Quote
           </a>
-          <a href="tel:07424966646" className="btn-secondary" style={{ background: 'transparent', borderColor: 'white', color: 'white', display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <a href="tel:+447424966646" className="btn-secondary" style={{ background: 'transparent', borderColor: 'white', color: 'white', display: 'flex', alignItems: 'center', gap: '8px' }}>
             <Phone size={20} />
-            Call 07424 966646
+            Call +447424966646
           </a>
           <a href="https://wa.me/447424966646" target="_blank" rel="noreferrer" className="btn-primary" style={{ background: '#25D366', color: 'white', border: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}>
             <MessageCircle size={20} />

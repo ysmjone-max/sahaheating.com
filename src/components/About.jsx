@@ -12,7 +12,7 @@ const About = () => {
               Trusted Professionals in <span className="text-gradient">Heating & Plumbing</span>
             </h2>
             <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', lineHeight: 1.8, marginBottom: '24px' }}>
-              At SAM H Heating & Plumbing, we pride ourselves on delivering top-tier service across London. With years of experience and full Gas Safe registration, we handle every job with precision, safety, and a commitment to customer satisfaction.
+              At SAM H Heating & Plumbing, we pride ourselves on delivering top-tier service across Middlesbrough, England and its surroundings. With years of experience and full Gas Safe registration, we handle every job with precision, safety, and a commitment to customer satisfaction.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '32px' }}>
               {[

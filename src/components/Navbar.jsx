@@ -71,9 +71,9 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <a href="tel:07424966646" className="btn-primary pulse-btn" style={{ padding: '12px 24px', fontSize: '1rem', marginLeft: '16px' }}>
-            <Phone size={18} />
-            Call 07424 966646
+          <a href="tel:+447424966646" className="btn-primary pulse-btn" style={{ padding: '12px 24px', fontSize: '1rem', marginLeft: '16px' }}>
+            <Phone size={18} style={{ marginRight: '8px' }} />
+            Call +447424966646
           </a>
         </div>
 
@@ -99,9 +99,9 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <a href="tel:07424966646" className="btn-primary" style={{ padding: '16px 32px', fontSize: '1.2rem', marginTop: '16px' }}>
-            <Phone size={24} />
-            07424 966646
+          <a href="tel:+447424966646" className="btn-primary" style={{ padding: '16px 32px', fontSize: '1.2rem', marginTop: '16px' }}>
+            <Phone size={20} style={{ marginRight: '12px' }} />
+            +447424966646
           </a>
         </div>
       )}

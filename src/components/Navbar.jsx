@@ -49,10 +49,10 @@ const Navbar = () => {
       zIndex: 1000,
       transition: 'all 0.3s ease'
     }}>
-      <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <div className="container" style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
         
         {/* Logo Area */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', zIndex: 1001 }}>
+        <div style={{ flex: '1 1 0', zIndex: 1001, display: 'flex', alignItems: 'center' }}>
           <img 
             src="/logo.png" 
             alt="SAM H Heating & Plumbing" 
@@ -64,27 +64,35 @@ const Navbar = () => {
           />
         </div>
 
-        {/* Desktop Nav */}
-        <div style={{ display: 'none', gap: '32px', alignItems: 'center' }} className="desktop-nav">
+        {/* Desktop Nav - Centered */}
+        <div style={{ display: 'none', gap: '32px', alignItems: 'center', justifyContent: 'center', flex: '2 1 0' }} className="desktop-nav">
           {navLinks.map(link => (
             <a key={link.name} href={link.href} className="nav-link">
               {link.name}
             </a>
           ))}
-          <a href="tel:+447424966646" className="btn-primary pulse-btn" style={{ padding: '12px 24px', fontSize: '1rem', marginLeft: '16px' }}>
+        </div>
+
+        {/* Call Button - Right Aligned */}
+        <div style={{ display: 'none', alignItems: 'center', justifyContent: 'flex-end', flex: '1 1 0' }} className="desktop-nav">
+          <a href="tel:+447424966646" className="btn-primary pulse-btn" style={{ padding: '12px 24px', fontSize: '1rem' }}>
             <Phone size={18} style={{ marginRight: '8px' }} />
             Call +447424966646
           </a>
         </div>
 
         {/* Mobile Menu Toggle */}
-        <button 
-          className="mobile-toggle"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          style={{ background: 'transparent', color: 'white', zIndex: 1001, border: 'none', cursor: 'pointer' }}
-        >
-          {isMobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
-        </button>
+        <div style={{ display: 'flex', justifyContent: 'flex-end', flex: '1 1 0' }} className="mobile-toggle-wrapper">
+          <button 
+            className="mobile-toggle"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            style={{ background: 'transparent', color: 'white', zIndex: 1001, border: 'none', cursor: 'pointer' }}
+          >
+            {isMobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
+          </button>
+        </div>
+
+
       </div>
 
       {/* Mobile Menu */}

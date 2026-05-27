@@ -32,7 +32,7 @@ const Contact = () => {
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         
         {/* Contact Form and Details Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '64px', marginBottom: '80px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '64px', marginBottom: '80px' }}>
           
           {/* Form */}
           <div className="animate-fade-up" style={{ background: 'rgba(255,255,255,0.03)', padding: '40px', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }}>
@@ -43,9 +43,9 @@ const Contact = () => {
               {/* Replace value with your Web3Forms Access Key */}
               <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE" />
               
-              <div style={{ display: 'flex', gap: '16px' }}>
-                <input type="text" name="name" placeholder="Your Name" required style={{ flex: 1, padding: '16px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.3)', color: 'white', fontSize: '1rem', outline: 'none' }} onFocus={(e) => e.target.style.borderColor = 'var(--primary-blue)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} />
-                <input type="tel" name="phone" placeholder="Phone" style={{ flex: 1, padding: '16px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.3)', color: 'white', fontSize: '1rem', outline: 'none' }} onFocus={(e) => e.target.style.borderColor = 'var(--primary-blue)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} />
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '16px' }}>
+                <input type="text" name="name" placeholder="Your Name" required style={{ width: '100%', padding: '16px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.3)', color: 'white', fontSize: '1rem', outline: 'none', boxSizing: 'border-box' }} onFocus={(e) => e.target.style.borderColor = 'var(--primary-blue)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} />
+                <input type="tel" name="phone" placeholder="Phone" style={{ width: '100%', padding: '16px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.3)', color: 'white', fontSize: '1rem', outline: 'none', boxSizing: 'border-box' }} onFocus={(e) => e.target.style.borderColor = 'var(--primary-blue)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} />
               </div>
               <input type="email" name="email" placeholder="Your Email" required style={{ width: '100%', padding: '16px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.3)', color: 'white', fontSize: '1rem', boxSizing: 'border-box', outline: 'none' }} onFocus={(e) => e.target.style.borderColor = 'var(--primary-blue)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} />
               <textarea name="message" placeholder="How can we help you? (e.g. Boiler Service, Emergency Repair)" required rows="4" style={{ width: '100%', padding: '16px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.3)', color: 'white', fontSize: '1rem', resize: 'vertical', boxSizing: 'border-box', outline: 'none', fontFamily: 'inherit' }} onFocus={(e) => e.target.style.borderColor = 'var(--primary-blue)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}></textarea>

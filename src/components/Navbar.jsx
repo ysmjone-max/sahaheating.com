@@ -77,7 +77,7 @@ const Navbar = () => {
         <div style={{ display: 'none', alignItems: 'center', justifyContent: 'flex-end', flex: '1 1 0' }} className="desktop-nav">
           <a href="tel:+447424966646" className="btn-primary pulse-btn" style={{ padding: '12px 24px', fontSize: '1rem' }}>
             <Phone size={18} style={{ marginRight: '8px' }} />
-            Call +447424966646
+            +447424966646
           </a>
         </div>
 

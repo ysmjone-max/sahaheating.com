@@ -5,10 +5,12 @@ const Gallery = () => {
   const scrollRef = useRef(null);
 
   const images = [
-    'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1585909695084-3b6807802db4?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=800',
+    { src: '/gallery/radiator-1.jpg', title: 'Designer Radiator Installation' },
+    { src: '/gallery/pipework-1.jpg', title: 'Precision Manifold Pipework' },
+    { src: '/gallery/boiler-1.jpg', title: 'Baxi Boiler Installation' },
+    { src: '/gallery/radiator-2.jpg', title: 'Modern Radiator Fitting' },
+    { src: '/gallery/pipework-2.jpg', title: 'Copper Pipework Routing' },
+    { src: '/gallery/boiler-2.jpg', title: 'Heating System Upgrades' }
   ];
 
   const scroll = (direction) => {
@@ -52,9 +54,12 @@ const Gallery = () => {
               borderRadius: '16px'
             }}
           >
-            {images.map((img, i) => (
-              <div key={i} style={{ minWidth: '100%', scrollSnapAlign: 'center', borderRadius: '16px', overflow: 'hidden' }}>
-                <img src={img} alt={`Recent Work ${i + 1}`} style={{ width: '100%', height: '500px', objectFit: 'cover' }} />
+            {images.map((item, i) => (
+              <div key={i} style={{ minWidth: '100%', scrollSnapAlign: 'center', borderRadius: '16px', overflow: 'hidden', position: 'relative' }}>
+                <img src={item.src} alt={item.title} style={{ width: '100%', height: '500px', objectFit: 'cover' }} />
+                <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '32px 24px', background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%)' }}>
+                  <h3 style={{ color: 'white', margin: 0, fontSize: '1.5rem', fontWeight: 600, textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>{item.title}</h3>
+                </div>
               </div>
             ))}
           </div>

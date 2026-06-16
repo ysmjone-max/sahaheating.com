@@ -6,8 +6,11 @@ const Gallery = () => {
 
   const images = [
     { src: '/gallery/radiator-1.jpg', title: 'Designer Radiator Installation' },
+    { src: '/gallery/luxury-bathroom-1.jpg', title: 'Luxury Bathroom Installation' },
     { src: '/gallery/pipework-1.jpg', title: 'Precision Manifold Pipework' },
+    { src: '/gallery/designer-radiator-2.jpg', title: 'Premium Designer Radiators' },
     { src: '/gallery/boiler-1.jpg', title: 'Baxi Boiler Installation' },
+    { src: '/gallery/luxury-shower-1.jpg', title: 'Modern Shower Enclosures' },
     { src: '/gallery/radiator-2.jpg', title: 'Modern Radiator Fitting' },
     { src: '/gallery/pipework-2.jpg', title: 'Copper Pipework Routing' },
     { src: '/gallery/boiler-2.jpg', title: 'Heating System Upgrades' }
@@ -56,7 +59,7 @@ const Gallery = () => {
           >
             {images.map((item, i) => (
               <div key={i} style={{ minWidth: '100%', scrollSnapAlign: 'center', borderRadius: '16px', overflow: 'hidden', position: 'relative' }}>
-                <img src={item.src} alt={item.title} loading="lazy" style={{ width: '100%', height: '500px', objectFit: 'cover' }} />
+                <img src={item.src} alt={item.title} loading="lazy" style={{ width: '100%', height: '500px', objectFit: 'cover', filter: 'contrast(1.15) brightness(1.05) saturate(1.1)' }} />
                 <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '32px 24px', background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%)' }}>
                   <h3 style={{ color: 'white', margin: 0, fontSize: '1.5rem', fontWeight: 600, textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>{item.title}</h3>
                 </div>

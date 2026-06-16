@@ -9,6 +9,8 @@ import RibbonBackground from './components/RibbonBackground';
 
 import CtaBanner from './components/CtaBanner';
 import Gallery from './components/Gallery';
+import Process from './components/Process';
+import WhyChooseUs from './components/WhyChooseUs';
 import { MessageCircle } from 'lucide-react';
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
       <main>
         <Hero />
         <Services />
+        <WhyChooseUs />
+        <Process />
         <About />
         <Gallery />
         <Reviews />

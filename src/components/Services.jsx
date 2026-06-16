@@ -5,28 +5,28 @@ const Services = () => {
   const services = [
     {
       icon: <Droplet size={32} />,
-      title: 'Plumbing & Heating',
-      description: 'All aspects of plumbing and heating covered, from minor repairs to full installations.',
+      title: 'Bespoke Bathrooms',
+      description: 'Unique bathroom installations tailored precisely to your space and requirements. We work closely with you from design to fitting.',
     },
     {
       icon: <Wrench size={32} />,
-      title: 'Repairs',
-      description: 'Fast and reliable repairs for boilers, pipes, and all plumbing fixtures to get things running smoothly.',
+      title: 'Repairs & Servicing',
+      description: 'Fast and reliable emergency repairs for boilers, leaks, and all plumbing fixtures to get your home running smoothly again.',
     },
     {
       icon: <CheckCircle size={32} />,
-      title: 'Installation',
-      description: 'Professional installation of new boilers, radiators, bathrooms, and complete heating systems.',
+      title: 'Boilers & Central Heating',
+      description: 'Expert, meticulous installation of new, highly efficient heating systems using only the best materials in the business.',
     },
     {
       icon: <Flame size={32} />,
-      title: 'Annual Boiler Service',
-      description: 'Keep your boiler running safely and efficiently with our comprehensive annual servicing.',
+      title: 'Annual Boiler Servicing',
+      description: 'Keep your boiler running safely and at peak efficiency with our comprehensive annual servicing and preventative maintenance.',
     },
     {
       icon: <Shield size={32} />,
-      title: 'Landlord Safety',
-      description: 'Certified Gas Safe Register inspections and landlord safety certificates.',
+      title: 'Health & Safety Priority',
+      description: 'Fully Gas Safe registered. We adhere strictly to health and safety regulations, ensuring a hazard-free environment during all work.',
     }
   ];
 
